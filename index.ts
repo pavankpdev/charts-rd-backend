@@ -123,6 +123,18 @@ app.get("/custom", (req, res) => {
     res.json(paginatedFilteredData)
 })
 
+app.get("/categories", (_, res) => {
+    res.json({
+        results: [
+            "Supply Chain",
+            "Reduction",
+            "Reduced",
+            "Compensation",
+            "Compensated"
+        ]
+    })
+})
+
 app.listen(3001, () => {
     console.log(`Example app listening on port 3001`)
 })
